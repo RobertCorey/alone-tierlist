@@ -1,0 +1,16 @@
+diff --git a/node_modules/@stytch/stytch-react/src/Stytch.tsx b/node_modules/@stytch/stytch-react/src/Stytch.tsx
+index fdc068d..c1fa1fa 100644
+--- a/node_modules/@stytch/stytch-react/src/Stytch.tsx
++++ b/node_modules/@stytch/stytch-react/src/Stytch.tsx
+@@ -46,10 +46,7 @@ export const Stytch = ({ publicToken, style, callbacks, loginOrSignupView }: Sty
+       publicToken,
+       'The Stytch component must either be inside a <StytchProvider> or provided the publicToken prop.',
+     );
+-    // If Stytch has already been loaded, use global value
+-    if (typeof window !== undefined && window.Stytch) {
+-      return window.Stytch(publicToken);
+-    }
++    
+     // Otherwise, we will load Stytch
+     return null;
+   });
